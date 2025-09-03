@@ -1,15 +1,22 @@
 "use client";
-import { useState } from "react";
+import { PlayerStats } from "@/types/types";
+import { use, useState } from "react";
 
 export default function Home() {
   const [playerData, setPlayerData] = useState([]);
+
+  use(
+    fetch("http://localhost:8080/api/stats")
+      .then((res) => res.json())
+      .then((data) => setPlayerData(data))
+  );
 
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       Volleyball stats
       <div className="overflow-x-auto">
-        {playerData.map((player: any) => (
-          <div>{prop.name}</div>
+        {playerData.map((player: PlayerStats) => (
+        
         ))}
         <table className="table table-zebra">
           {/* head */}
