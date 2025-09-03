@@ -26,9 +26,10 @@ export default function Home() {
                 <th>POS</th>
                 <th>Kills</th>
                 <th>HT %</th>
+                <th>HTErr</th>
                 <th>Digs</th>
-                <th>ACE</th>
                 <th>Sets</th>
+                <th>ACE</th>
                 <th>Solo Blocks</th>
                 <th>ERR</th>
               </tr>
@@ -36,24 +37,18 @@ export default function Home() {
             <tbody>
               {/* row 1 */}
               <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>12</td>
-                <td>Blue</td>
-              </tr>
-              {/* row 2 */}
-              <tr>
-                <th>2</th>
-                <td>Hart Hagerty</td>
-                <td>24</td>
-                <td>Purple</td>
-              </tr>
-              {/* row 3 */}
-              <tr>
-                <th>3</th>
-                <td>Brice Swyre</td>
-                <td>8</td>
-                <td>Red</td>
+                <th>{player.order}</th>
+                <td>{player.name}</td>
+                <td>{player.number}</td>
+                <td>{player.kills}</td>
+                <td>{player.hittingPercent}</td>
+                <td>{player.hittingErr}</td>
+                <td>{player.digs}</td>
+                <td>{player.sets}</td>
+                <td>{player.aces}</td>
+                <td>{player.aces}</td>
+                <td>{player.soloblocks}</td>
+                <td>{player.err}</td>                
               </tr>
             </tbody>
           </table>
