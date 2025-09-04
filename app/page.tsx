@@ -31,7 +31,7 @@ useEffect(() => {
               <th>Digs</th>
               <th>Sets</th>
               <th>ACE</th>
-              <th>Solo Blocks</th>
+              <th>SB</th>
               <th>ERR</th>
             </tr>
           </thead>
